@@ -1,37 +1,147 @@
-## Welcome to GitHub Pages
+# Base de datos relacional		
+	
+## ¿Qué es?		
+		
+   Desde el punto de vista informático, la base de datos es un sistema formado por un conjunto de datos almacenados en discos que          permiten el acceso directo a ellos y un conjunto de programas que manipulen ese conjunto de datos.		
+   		
+    Pensemoslo como un almacén, en un almacén guardamos cosas, todo aquello que consideremos importante, necesario y que luego vayamos a    querer utilizar. Es así como debemos ver a la base de datos, como un almacén dónde vamos a guardar un gran volumen de datos pero de      forma organizada, de esta manera nos va a ser fácil acceder a ellos cada vez que los necesitemos. 		
+    		
+### **¿De qué forma accedemos a este almacén?**		
+ 		
+   Accedemos a través de consultas (query), las cuáles se realizan a través de un lenguaje en especifico, ese lenguaje se llama            SQL(Structured Query Language - Lenguaje de consultas estructurado).		
+    		
+    Ahora, si decimos que vamos a tratar a hablar sobre una base de datos relacional, esta tiene ciertas características:		
+    		
+- Una base de datos se compone de varias tablas o relaciones.		
+- No pueden existir dos tablas con el mismo nombre ni registro.			
+- Cada tabla es a su vez un conjunto de campos (columnas) y registros (filas).			
+- La relación entre una tabla padre y un hijo se lleva a cabo por medio de las claves primarias y claves foráneas (o ajenas).				
+- Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.			
+- Las claves ajenas se colocan en la tabla hija, contienen el mismo valor que la 		clave primaria del registro padre; por medio de       estas se hacen las formas relacionales.		
 
-You can use the [editor on GitHub](https://github.com/Eri02/baseDeDatos/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## ¿Cuándo usar una BD?			
+Cuando tengamos que manejar y guardar mucha información. ¿Dónde podemos pensar que manejan bases de datos? Por ejemplo, empresas de      telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna    web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Resumiendo, uso una base de datos cuando quiero guardar datos que no quiero perder, datos que quiero que perduren en el tiempo.	
+**Antes de empezar con una BD, empecemos por modelarla, para eso necesitamos _Un DER_**		
 
-### Markdown
+# DER (Diagrama de entidad-relación)		
+ 		
+### **¿Qué es un DER?**		
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Es una técnica de modelado de datos que crea una ilustración de las _entidades_ de un sistema de información y las _relaciones_ entre    las entidades.		
+	
+Los DER modelan los requisitos de almacenamiento de datos de una organización con tres componentes principales: **entidades,            atributos y relaciones**.		
 
-```markdown
-Syntax highlighted code block
+**1. Entidades:** Representan personas, lugares, elementos, eventos, o conceptos.		
+     Una entidad puede ser un objeto con existencia física como: una persona, un animal, una casa, etc. (entidad concreta); o un objeto      con existencia conceptual como: un puesto de trabajo, una asignatura de clases, un nombre, etc. (entidad abstracta).		
+	
+**2. Atributos:** Representan propiedades o cualidades descriptivas de una entidad. Estos son también conocidos como elementos de            datos.		
+     Una entidad está descrita y se representa por sus características o atributos. Por ejemplo, la entidad **Persona** tiene por            atributos: Nombre, Apellido, Género, Estatura, Peso, Fecha de nacimiento.		
+      		
+**3. Relaciones:** Representan los enlaces entre las entidades.		
+  		
+### Restricciones		
+		
+**a) Cardinalidad**		
+     Dado un conjunto de relaciones en el que participan dos o más conjuntos de entidades, la correspondencia de cardinalidad indica el      número de entidades con las que puede estar relacionada una entidad dada.		
+ 		
+     Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
+ 		
+  _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                  departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento    y un departamento solo puede tener un jefe).		
+    		
+  _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente      se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,          respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
+ 		
+  _Muchos a Uno:_ (N:1) Una entidad en A se relaciona exclusivamente con una entidad en B. Pero una entidad en B se puede relacionar con    0 o muchas entidades en A (ejemplo empleado-centro de trabajo).		
+		
+  _Muchos a Muchos:_ (N:M) Una entidad en A se puede relacionar con 0 o con muchas entidades en B y viceversa (ejemplo asociaciones-        ciudadanos, donde muchos ciudadanos pueden pertenecer a una misma asociación, y cada ciudadano puede pertenecer a muchas asociaciones    distintas).		
+ 
+ **b) Modalidad**		
+    Dado un conjunto de relaciones R en el cual participa un conjunto de entidades A, dicha participación puede ser de dos tipos:		
+ 		
+   _Obligatoria:_ Cuando cada entidad en A participa en al menos una relación de R.		
+   _Opcional:_ Cuando al menos una entidad en A NO participa en alguna relación de R.		
+    		
+ 		
+    ![DER](http://www.hermosaprogramacion.com/wp-content/uploads/2014/07/entidad-relacion-1.jpg)		
+   		
+ Ahora, para que entendamos que son todas esas cosas que mecionamos, entidades, atributos, relaciones, ect, tenemos este pequeño DER. 			
+  En el DER, tenemos 3 entidades, la _entidad_ CLIENTE, FACTURA y PRODUCTO, las cuales tienen sus respectivos _atributos_. En el caso de   la entidad CLIENTE, esta tiene por atributos id_cliente (primary key, luego veremos qué es), nombre, apellido, dirección,               fecha_nacimiento, telefono, email y categoría. FACTURA, tiene num_factura, id_cliente (foreign key, luego veremos qué es) este sería     el atributo por el cúal la entidad CLIENTE y la entidad FACTURA se relacionan, bueno siguiendo con los atributos, fecha e id_producto,   acá pasa lo mismo, FACTURA se relaciona con PRODUCTO por medio de este atributo ¿Por qué necesito relacionar esto? bueno, pensemos un   poco, ¿Qué datos necesito en una factura? ¿Qué debe conocer una factura para poder mostrarme la cuenta de todo?, necesita el producto,   de hecho una factura me muestra los productos y listo pero en una base de datos no me conviene cargar directamente en FACTURA, nombre   de producto, valor, cantidad, etc, ¿Por qué no me conviene? Porque al llenar tantos datos uso recursos de más, hago más pesada la BD y   con ello lenta, entonces nos abstraemos y solo guardamos un atributo por el cuál dos entidades se van a relacionar y por medio de ese   atributo, voy a tener cuando lo necesite, los datos de ese producto en una factura. Con ese id_producto, al conocerlo, si queremos más   detalle de ese producto, nos basta solo con su id, este nos ayudaría a traer sus demás atributos,por ejemplo nombre, precio, stock,     etc.		
+  		
+  **_Acá hay un video en el cuál van creando un DER._**		
+   [Modelo entidad-relación](https://www.youtube.com/watch?v=bxdKRHgLTSg) 		
+ 	
+## Claves		
+ 		
+**1. Clave primaria (PK)**		
+ 
+ Es un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla. Una clave primaria comprende de esta   manera una columna o conjunto de columnas. No puede haber dos filas en una tabla que tengan la misma clave primaria.		
+ 		
+**2. Clave foránea (FK)**		
+		
+  Es una limitación referencial entre dos tablas. La clave foránea identifica una columna o grupo de columnas en una tabla (tabla hija o   referendo) que se refiere a una columna o grupo de columnas en otra tabla (tabla maestra o referenciada). Las columnas en la tabla       referendo deben ser la clave primaria u otra clave candidata en la tabla referenciada.		
+		
+# Primeros pasos con una base de datos		
+ 	
+### Instalación de motor de base de datos		
+		
+Instalar un motor de base de datos. Sepan que hay gran variedad y se eligen en base a nuestras necesidades y requerimientos. En este     caso encontrarán los pasos para instalar y trabajar con MySQL Workbench. 		
+[Descargar MySQL acá](http://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.11.0.msi)		
+Instalar el MySQL en la configuracion Developer, ahí pueden crear ustedes el usuario y contraseña que quieran, o tomar como             sugerencia User: root pass:admin		
+	
+### Crear una tabla (CREATE TABLE...)		
 
-# Header 1
-## Header 2
-### Header 3
+Ahora, una vez que está la base instalada, tomemos como ejemplo un negocio, uno de ventas de productos del cuál queremos guardar los     datos de los clientes junto con la facturación correspondiente.		
+		
+Pensemos un momento en qué datos deberíamos guardar...		
 
-- Bulleted
-- List
+En el caso del cliente, necesitaremos datos como:		
+- Nombre 		
+- Apellido		
+- Nro de Cuit		
+- Dirección		
+- Código de provincia		
+- Ciudad		
+- Código postal		
+- Teléfono		
+		
+### Crear base de datos (CREATE DATABASE...)		
 
-1. Numbered
-2. List
+Antes de crear la tabla para clientes, tenemos que crear la base de datos dónde se van a alojar las tablas. El código que necesitamos    para crear la base es CREATE DATABASE nombreDeLaBase. Para el ejemplo, quedaría algo así:		
+		
+`CREATE DATABASE BDPTF;`		
+		
+Después de esto se le tiene que indicar al motor, qué base debe usar para trabajar, para eso escribimos algo así:		
+		
+`USE BDPTF;`		
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Eri02/baseDeDatos/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Ahora sí, con la BD creada y luego de indicarle sobre qué base se va a trabajar, pasamos a crear la tabla para guardar los datos de los  clientes. La creación de la tabla sería así:		
+		
+```		
+CREATE TABLE Clientes		
+(codCliente INTEGER PRIMARY KEY,		
+nombre VARCHAR(60) NOT NULL,		
+apellido VARCHAR(60) NOT NULL,		
+nroCuit BIGINT UNIQUE,		
+empresa VARCHAR(60),		
+direccion1 VARCHAR(60),		
+direccion2 VARCHAR(60),		
+codProvincia SMALLINT REFERENCES Provincias,		
+ciudad VARCHAR(60),		
+codPostal VARCHAR(10),		
+teléfono VARCHAR(60)		
+);		
+```		
+Ahora, unas aclaraciones sobre la creación de la tabla Clientes:		
+- Las columnas que se les va a crear a cada tabla van dentro de paréntesis.		
+- Primero se escribe el nombre de la columna y luego el tipo de dato.		
+- Los tipos de datos varían según el motor de base de datos que se use.		
+- Algunos motores de bases de datos son case sensitive, o sea, que distinguen entre mayúsculas y minúsculas, en este caso MySQL no lo     es, pero esto se debe tener en cuenta.		
+- El punto y coma ";" se usa para finalizar una sentencia, en el caso de la creación de la tabla Clientes, si luego viniese otra tabla     es necesario finalizar con un ";" y después de esto escribir el códgio correspondiente a la creación de otra tabla, si no hubiese       código siguiente a esto, puede omitirse el punto y coma.		
+		
+De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia en el repositorio junto al DER correspondiente.		
+		
+### Insertar datos (INSERT )		
+### Actualizar de datos (UPDATE)		
+### Eliminar datos (DELETE)		
+### Eliminar tabla (DROP)
