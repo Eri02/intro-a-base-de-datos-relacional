@@ -4,34 +4,34 @@
 		
    Desde el punto de vista informático, la base de datos es un sistema formado por un conjunto de datos almacenados en discos que          permiten el acceso directo a ellos y un conjunto de programas que manipulen ese conjunto de datos.		
    		
-    Pensemoslo como un almacén, en un almacén guardamos cosas, todo aquello que consideremos importante, necesario y que luego vayamos a    querer utilizar. Es así como debemos ver a la base de datos, como un almacén dónde vamos a guardar un gran volumen de datos pero de      forma organizada, de esta manera nos va a ser fácil acceder a ellos cada vez que los necesitemos. 		
+   Pensemoslo como un almacén, en un almacén guardamos cosas, todo aquello que consideremos importante, necesario y que luego vayamos a    querer utilizar. Es así como debemos ver a la base de datos, como un almacén dónde vamos a guardar un gran volumen de datos pero de      forma organizada, de esta manera nos va a ser fácil acceder a ellos cada vez que los necesitemos. 		
     		
 ### **¿De qué forma accedemos a este almacén?**		
  		
    Accedemos a través de consultas (query), las cuáles se realizan a través de un lenguaje en especifico, ese lenguaje se llama            SQL(Structured Query Language - Lenguaje de consultas estructurado).		
     		
-    Ahora, si decimos que vamos a tratar a hablar sobre una base de datos relacional, esta tiene ciertas características:		
+   Ahora, si decimos que vamos a tratar a hablar sobre una base de datos relacional, esta tiene ciertas características:		
     		
 - Una base de datos se compone de varias tablas o relaciones.		
 - No pueden existir dos tablas con el mismo nombre ni registro.			
 - Cada tabla es a su vez un conjunto de campos (columnas) y registros (filas).			
-- La relación entre una tabla padre y un hijo se lleva a cabo por medio de las claves primarias y claves foráneas (o ajenas).				
-- Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.			
-- Las claves ajenas se colocan en la tabla hija, contienen el mismo valor que la 		clave primaria del registro padre; por medio de       estas se hacen las formas relacionales.		
+- La relación entre una tabla padre y un hijo se lleva a cabo por medio de las claves primarias y claves foráneas (o ajenas).		
+- Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.
+- Las claves ajenas se colocan en la tabla hija, contienen el mismo valor que la clave primaria del registro padre; por medio de estas 	   se hacen las formas relacionales.		
 
 ## ¿Cuándo usar una BD?			
-Cuando tengamos que manejar y guardar mucha información. ¿Dónde podemos pensar que manejan bases de datos? Por ejemplo, empresas de      telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna    web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
+  Cuando tengamos que manejar y guardar mucha información. ¿Dónde podemos pensar que manejan bases de datos? Por ejemplo, empresas de     telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna   web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
 
-Resumiendo, uso una base de datos cuando quiero guardar datos que no quiero perder, datos que quiero que perduren en el tiempo.	
+  Resumiendo, uso una base de datos cuando quiero guardar datos que no quiero perder, datos que quiero que perduren en el tiempo.	
 **Antes de empezar con una BD, empecemos por modelarla, para eso necesitamos _Un DER_**		
 
 # DER (Diagrama de entidad-relación)		
  		
 ### **¿Qué es un DER?**		
 
-Es una técnica de modelado de datos que crea una ilustración de las _entidades_ de un sistema de información y las _relaciones_ entre    las entidades.		
+  Es una técnica de modelado de datos que crea una ilustración de las _entidades_ de un sistema de información y las _relaciones_ entre   las entidades.		
 	
-Los DER modelan los requisitos de almacenamiento de datos de una organización con tres componentes principales: **entidades,            atributos y relaciones**.		
+  Los DER modelan los requisitos de almacenamiento de datos de una organización con tres componentes principales: **entidades,             atributos y relaciones**.		
 
 **1. Entidades:** Representan personas, lugares, elementos, eventos, o conceptos.		
      Una entidad puede ser un objeto con existencia física como: una persona, un animal, una casa, etc. (entidad concreta); o un objeto      con existencia conceptual como: un puesto de trabajo, una asignatura de clases, un nombre, etc. (entidad abstracta).		
@@ -44,28 +44,27 @@ Los DER modelan los requisitos de almacenamiento de datos de una organización c
 ### Restricciones		
 		
 **a) Cardinalidad**		
-     Dado un conjunto de relaciones en el que participan dos o más conjuntos de entidades, la correspondencia de cardinalidad indica el      número de entidades con las que puede estar relacionada una entidad dada.		
+    Dado un conjunto de relaciones en el que participan dos o más conjuntos de entidades, la correspondencia de cardinalidad indica el       número de entidades con las que puede estar relacionada una entidad dada.		
  		
-     Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
+    Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
  		
-  _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                  departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento    y un departamento solo puede tener un jefe).		
+   _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                   departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento     y un departamento solo puede tener un jefe).		
     		
-  _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente      se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,          respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
+   _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente       se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,           respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
  		
-  _Muchos a Uno:_ (N:1) Una entidad en A se relaciona exclusivamente con una entidad en B. Pero una entidad en B se puede relacionar con    0 o muchas entidades en A (ejemplo empleado-centro de trabajo).		
+   _Muchos a Uno:_ (N:1) Una entidad en A se relaciona exclusivamente con una entidad en B. Pero una entidad en B se puede relacionar       con 0 o muchas entidades en A (ejemplo empleado-centro de trabajo).		
 		
-  _Muchos a Muchos:_ (N:M) Una entidad en A se puede relacionar con 0 o con muchas entidades en B y viceversa (ejemplo asociaciones-        ciudadanos, donde muchos ciudadanos pueden pertenecer a una misma asociación, y cada ciudadano puede pertenecer a muchas asociaciones    distintas).		
+   _Muchos a Muchos:_ (N:M) Una entidad en A se puede relacionar con 0 o con muchas entidades en B y viceversa (ejemplo asociaciones-       ciudadanos, donde muchos ciudadanos pueden pertenecer a una misma asociación, y cada ciudadano puede pertenecer a muchas   		     asociaciones    distintas).		
  
  **b) Modalidad**		
-    Dado un conjunto de relaciones R en el cual participa un conjunto de entidades A, dicha participación puede ser de dos tipos:		
- 		
+    Dado un conjunto de relaciones R en el cual participa un conjunto de entidades A, dicha participación puede ser de dos tipos:				
    _Obligatoria:_ Cuando cada entidad en A participa en al menos una relación de R.		
    _Opcional:_ Cuando al menos una entidad en A NO participa en alguna relación de R.		
     		
  		
     ![DER](http://www.hermosaprogramacion.com/wp-content/uploads/2014/07/entidad-relacion-1.jpg)		
    		
- Ahora, para que entendamos que son todas esas cosas que mecionamos, entidades, atributos, relaciones, ect, tenemos este pequeño DER. 			
+    Ahora, para que entendamos que son todas esas cosas que mecionamos, entidades, atributos, relaciones, ect, tenemos este pequeño DER. 			
   En el DER, tenemos 3 entidades, la _entidad_ CLIENTE, FACTURA y PRODUCTO, las cuales tienen sus respectivos _atributos_. En el caso de   la entidad CLIENTE, esta tiene por atributos id_cliente (primary key, luego veremos qué es), nombre, apellido, dirección,               fecha_nacimiento, telefono, email y categoría. FACTURA, tiene num_factura, id_cliente (foreign key, luego veremos qué es) este sería     el atributo por el cúal la entidad CLIENTE y la entidad FACTURA se relacionan, bueno siguiendo con los atributos, fecha e id_producto,   acá pasa lo mismo, FACTURA se relaciona con PRODUCTO por medio de este atributo ¿Por qué necesito relacionar esto? bueno, pensemos un   poco, ¿Qué datos necesito en una factura? ¿Qué debe conocer una factura para poder mostrarme la cuenta de todo?, necesita el producto,   de hecho una factura me muestra los productos y listo pero en una base de datos no me conviene cargar directamente en FACTURA, nombre   de producto, valor, cantidad, etc, ¿Por qué no me conviene? Porque al llenar tantos datos uso recursos de más, hago más pesada la BD y   con ello lenta, entonces nos abstraemos y solo guardamos un atributo por el cuál dos entidades se van a relacionar y por medio de ese   atributo, voy a tener cuando lo necesite, los datos de ese producto en una factura. Con ese id_producto, al conocerlo, si queremos más   detalle de ese producto, nos basta solo con su id, este nos ayudaría a traer sus demás atributos,por ejemplo nombre, precio, stock,     etc.		
   		
   **_Acá hay un video en el cuál van creando un DER._**		
@@ -75,14 +74,14 @@ Los DER modelan los requisitos de almacenamiento de datos de una organización c
  		
 **1. Clave primaria (PK)**		
  
- Es un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla. Una clave primaria comprende de esta   manera una columna o conjunto de columnas. No puede haber dos filas en una tabla que tengan la misma clave primaria.		
+   Es un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla. Una clave primaria comprende de        esta   manera una columna o conjunto de columnas. No puede haber dos filas en una tabla que tengan la misma clave primaria.		
  		
 **2. Clave foránea (FK)**		
 		
-  Es una limitación referencial entre dos tablas. La clave foránea identifica una columna o grupo de columnas en una tabla (tabla hija o   referendo) que se refiere a una columna o grupo de columnas en otra tabla (tabla maestra o referenciada). Las columnas en la tabla       referendo deben ser la clave primaria u otra clave candidata en la tabla referenciada.		
+   Es una limitación referencial entre dos tablas. La clave foránea identifica una columna o grupo de columnas en una tabla (tabla hija    o referendo) que se refiere a una columna o grupo de columnas en otra tabla (tabla maestra o referenciada). Las columnas en la tabla    referendo deben ser la clave primaria u otra clave candidata en la tabla referenciada.		
 		
 # Primeros pasos con una base de datos		
- 	
+
 ### Instalación de motor de base de datos		
 		
 Instalar un motor de base de datos. Sepan que hay gran variedad y se eligen en base a nuestras necesidades y requerimientos. En este     caso encontrarán los pasos para instalar y trabajar con MySQL Workbench. 		
@@ -132,7 +131,8 @@ codPostal VARCHAR(10),
 teléfono VARCHAR(60)		
 );		
 ```		
-Ahora, unas aclaraciones sobre la creación de la tabla Clientes:		
+Ahora, unas aclaraciones sobre la creación de la tabla Clientes:	
+
 - Las columnas que se les va a crear a cada tabla van dentro de paréntesis.		
 - Primero se escribe el nombre de la columna y luego el tipo de dato.		
 - Los tipos de datos varían según el motor de base de datos que se use.		
@@ -141,7 +141,7 @@ Ahora, unas aclaraciones sobre la creación de la tabla Clientes:
 		
 De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia en el repositorio junto al DER correspondiente.		
 		
-### Insertar datos (INSERT )		
+### Insertar datos (INSERT)		
 ### Actualizar de datos (UPDATE)		
 ### Eliminar datos (DELETE)		
 ### Eliminar tabla (DROP)
