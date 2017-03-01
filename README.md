@@ -44,27 +44,29 @@
 ### Restricciones		
 		
 **a) Cardinalidad**		
-    Dado un conjunto de relaciones en el que participan dos o más conjuntos de entidades, la correspondencia de cardinalidad indica el       número de entidades con las que puede estar relacionada una entidad dada.		
+    
+   Dado un conjunto de relaciones en el que participan dos o más conjuntos de entidades, la correspondencia de cardinalidad indica el      número de entidades con las que puede estar relacionada una entidad dada.		
+    
+   Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
  		
-    Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
- 		
-   _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                   departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento     y un departamento solo puede tener un jefe).		
+  _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                  departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento    y un departamento solo puede tener un jefe).		
     		
-   _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente       se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,           respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
+  _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente      se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,          respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
  		
-   _Muchos a Uno:_ (N:1) Una entidad en A se relaciona exclusivamente con una entidad en B. Pero una entidad en B se puede relacionar       con 0 o muchas entidades en A (ejemplo empleado-centro de trabajo).		
+  _Muchos a Uno:_ (N:1) Una entidad en A se relaciona exclusivamente con una entidad en B. Pero una entidad en B se puede relacionar        con 0 o muchas entidades en A (ejemplo empleado-centro de trabajo).		
 		
-   _Muchos a Muchos:_ (N:M) Una entidad en A se puede relacionar con 0 o con muchas entidades en B y viceversa (ejemplo asociaciones-       ciudadanos, donde muchos ciudadanos pueden pertenecer a una misma asociación, y cada ciudadano puede pertenecer a muchas   		     asociaciones    distintas).		
+  _Muchos a Muchos:_ (N:M) Una entidad en A se puede relacionar con 0 o con muchas entidades en B y viceversa (ejemplo asociaciones-        ciudadanos, donde muchos ciudadanos pueden pertenecer a una misma asociación, y cada ciudadano puede pertenecer a muchas   		    asociaciones    distintas).		
  
  **b) Modalidad**		
-    Dado un conjunto de relaciones R en el cual participa un conjunto de entidades A, dicha participación puede ser de dos tipos:				
-   _Obligatoria:_ Cuando cada entidad en A participa en al menos una relación de R.		
-   _Opcional:_ Cuando al menos una entidad en A NO participa en alguna relación de R.		
+   
+   Dado un conjunto de relaciones R en el cual participa un conjunto de entidades A, dicha participación puede ser de dos tipos:				
+  _Obligatoria:_ Cuando cada entidad en A participa en al menos una relación de R.		
+  _Opcional:_ Cuando al menos una entidad en A NO participa en alguna relación de R.		
     		
  		
-    ![DER](http://www.hermosaprogramacion.com/wp-content/uploads/2014/07/entidad-relacion-1.jpg)		
+  ![DER](http://www.hermosaprogramacion.com/wp-content/uploads/2014/07/entidad-relacion-1.jpg)		
    		
-    Ahora, para que entendamos que son todas esas cosas que mecionamos, entidades, atributos, relaciones, ect, tenemos este pequeño DER. 			
+  Ahora, para que entendamos que son todas esas cosas que mecionamos, entidades, atributos, relaciones, ect, tenemos este pequeño DER. 			
   En el DER, tenemos 3 entidades, la _entidad_ CLIENTE, FACTURA y PRODUCTO, las cuales tienen sus respectivos _atributos_. En el caso de   la entidad CLIENTE, esta tiene por atributos id_cliente (primary key, luego veremos qué es), nombre, apellido, dirección,               fecha_nacimiento, telefono, email y categoría. FACTURA, tiene num_factura, id_cliente (foreign key, luego veremos qué es) este sería     el atributo por el cúal la entidad CLIENTE y la entidad FACTURA se relacionan, bueno siguiendo con los atributos, fecha e id_producto,   acá pasa lo mismo, FACTURA se relaciona con PRODUCTO por medio de este atributo ¿Por qué necesito relacionar esto? bueno, pensemos un   poco, ¿Qué datos necesito en una factura? ¿Qué debe conocer una factura para poder mostrarme la cuenta de todo?, necesita el producto,   de hecho una factura me muestra los productos y listo pero en una base de datos no me conviene cargar directamente en FACTURA, nombre   de producto, valor, cantidad, etc, ¿Por qué no me conviene? Porque al llenar tantos datos uso recursos de más, hago más pesada la BD y   con ello lenta, entonces nos abstraemos y solo guardamos un atributo por el cuál dos entidades se van a relacionar y por medio de ese   atributo, voy a tener cuando lo necesite, los datos de ese producto en una factura. Con ese id_producto, al conocerlo, si queremos más   detalle de ese producto, nos basta solo con su id, este nos ayudaría a traer sus demás atributos,por ejemplo nombre, precio, stock,     etc.		
   		
   **_Acá hay un video en el cuál van creando un DER._**		
@@ -90,12 +92,13 @@ Instalar el MySQL en la configuracion Developer, ahí pueden crear ustedes el us
 
 Una vez que se haya instalado, abren el workbench y verán algo así:
 
-[Inicio de workbench](http://enriqueincioch.azurewebsites.net/wp-content/uploads/2015/05/MySQLAzure04.png)
+![Inicio de workbench](http://enriqueincioch.azurewebsites.net/wp-content/uploads/2015/05/MySQLAzure04.png)
 
 En ese panel verán todas las conexiones que vayan creando, en este caso, solo verán una pero pueden ir creando más en ese signo más "+" que está marcado en rojo.
 
-Cuando se hace clic en la conexión les va a pedir la contraseña, escriben la "admin" o la que hayan elegido. Luego verán esto:
+Cuando se hace clic en la conexión les va a pedir la contraseña, escriben "admin" o la que hayan elegido. Luego verán esto:
 
+![Primera vista - Query](http://wb.fabforce.eu/wp-content/uploads/Screen-Shot-2013-06-14-at-6.58.22-PM-800x515.png)
 	
 ### Crear una tabla (CREATE TABLE...)		
 
