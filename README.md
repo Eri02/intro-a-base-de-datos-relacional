@@ -153,7 +153,35 @@ Ahora, unas aclaraciones sobre la creación de la tabla Clientes:
 		
 De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia en el repositorio junto al DER correspondiente.		
 		
-### Insertar datos (INSERT)		
-### Actualizar de datos (UPDATE)		
+### Insertar datos (INSERT)
+
+- Inserta datos en tablas existentes.
+- Se puede usar la palabra clave DEFAULT para poner una columna a su valor por defecto de forma explícita. (Nuevo en MySQL 4.0.3.) Esto   hace más sencillo escribir sentencias INSERT que asignan valores a casi todas las columnas, porque permite la escritura de una lista     VALUES incompleta, que no incluye un valor para cada columna de la tabla. En otro caso, se debería escribir la lista de nombres de       columnas correspondiente a cada valor en la lista VALUES.
+- En las columnas que tienen tipo de dato con valor autoincremental se escribe el campo como NULL y el motor incrementará el valor         correspondiente. 
+- Si no se especifica una lista de columnas para INSERT ... VALUES, se deben proporcionar valores para **TODAS** las columnas en la       lista VALUES(), además estos valores deben ir en el mismo orden que tienen las columnas.
+
+Se pueden insertar datos de la sgte forma:
+
+```
+INSERT INTO nombreDeLaTabla (column1, column2, column3,...) 
+VALUES (val1, val2,val3,...);
+```
+O...
+```
+INSERT INTO nombreDeLaTabla 
+VALUES (val1, val2,val3,...);
+```
+O... varias filas en un solo insert:
+```
+INSERT INTO nombreDeLaTabla 
+VALUES (val1, val2,val3,...),
+VALUES (val1, val2,val3,...),
+VALUES (val1, val2,val3,...);
+...
+```
+
+### Actualizar de datos (UPDATE)	
+
+
 ### Eliminar datos (DELETE)		
 ### Eliminar tabla (DROP)
