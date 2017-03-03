@@ -1,4 +1,4 @@
-# Introducción a una Base de Datos Relacional	
+# Introducción a las Bases de Datos Relacionales
 	
 ## ¿Qué es una base de datos relacional?		
 		
@@ -19,7 +19,7 @@
 - Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.
 - Las claves ajenas se colocan en la tabla hija, contienen el mismo valor que la clave primaria del registro padre; por medio de estas 	   se hacen las formas relacionales.		
 
-## ¿CPara qué sirve una base de datos? ¿Cuándo usar una base de datos?			
+## ¿Para qué sirve una base de datos? ¿Cuándo usar una base de datos?			
   Cuando tengamos que manejar y guardar mucha información. ¿Dónde podemos pensar que manejan bases de datos? Por ejemplo, empresas de     telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna   web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
 
   Resumiendo, uso una base de datos cuando quiero guardar datos que no quiero perder, datos que quiero que perduren en el tiempo.	
@@ -39,8 +39,10 @@ El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en ba
 ## Contenidos
 
 1. Instalación del motor de base de datos (MySQL).
-2. Creación de base de datos y tablas.
-3. Inserción de datos.
+2. Modelado de datos - DER (Diagrama de entidad relación)
+3. Relaciones y claves.
+4. Creación de base de datos y tablas.
+5. Inserción de datos.
 
 
 ## Referencias
@@ -70,7 +72,7 @@ El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en ba
     
    Dados los conjuntos de entidades A y B, la correspondencia de cardinalidades puede ser:		
  		
-  _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                  departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento  c  y un departamento solo puede tener un jefe).		
+  _Uno a Uno:_ (1:1) Una entidad A se relaciona con solo un registro en una entidad B. (ejemplo dos entidades, profesor y                  departamento, con llaves primarias, código_profesor y jefe_depto respectivamente, un profesor solo puede ser jefe de un departamento    y un departamento solo puede tener un jefe).		
     		
   _Uno a muchos:_ (1:N) Una entidad en A se relaciona con cero o muchos registros en una entidad B. Pero los registros de B solamente      se relacionan con un registro en A. (ejemplo: dos entidades, vendedor y ventas, con llaves primarias, código_vendedor y venta,          respectivamente, un vendedor puede tener muchas ventas pero una venta solo puede tener un vendedor).		
  		
