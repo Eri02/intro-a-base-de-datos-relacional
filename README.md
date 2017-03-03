@@ -39,7 +39,7 @@ El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en ba
 ## Contenidos
 
 1. Instalación del motor de base de datos (MySQL).
-2. [Modelado de datos - DER (Diagrama de entidad relación)](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/modelado-DER.md)
+2. [Modelado de datos - DER (Diagrama de entidad relación)](intro-a-base-de-datos-relacional/modelado-DER.md)
 3. Relaciones y claves.
 4. Creación de base de datos y tablas.
 5. Inserción de datos.
