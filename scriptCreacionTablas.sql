@@ -1,9 +1,10 @@
 USE BDPTF; /*Indico qué base de datos usar*/
 
 /*Creación de tablas*/
-CREATE TABLE Provincias
-(codProvincia SMALLINT PRIMARY KEY AUTO_INCREMENT,
-nombreProvincia VARCHAR(60)
+
+CREATE TABLE Barrios
+(codBarrio SMALLINT PRIMARY KEY AUTO_INCREMENT,
+nombreBarrio VARCHAR(60)
 );
 
 CREATE TABLE Productos
@@ -19,8 +20,7 @@ apellido VARCHAR(60) NOT NULL,
 nroCuit BIGINT UNIQUE,
 empresa VARCHAR(60), /* eliminar columna*/ 
 direccion1 VARCHAR(60),
-direccion2 VARCHAR(60), /* Eliminar columna*/
-codProvincia SMALLINT REFERENCES Provincias,
+codBarrio SMALLINT REFERENCES Barrios,
 ciudad VARCHAR(60),
 codPostal VARCHAR(10),
 telefono VARCHAR(60)
