@@ -38,11 +38,11 @@ El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en ba
 
 ## Contenidos
 
-1. [Instalación del motor de base de datos (MySQL)](https://eri02.github.io/intro-a-base-de-datos-relacional/instalacion-bd.html)
-2. [Modelado de datos - DER (Diagrama de entidad relación)](https://eri02.github.io/intro-a-base-de-datos-relacional/modelado-DER.html)
-3. [Claves](https://eri02.github.io/intro-a-base-de-datos-relacional/claves.html)
-4. [Creación de base de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/creacionBD-y-tablas.html)
-5. [Inserción, modificación de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/insercion-y-modificacion.html)
+1. [Instalación del motor de base de datos (MySQL)](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/instalacion-bd.html)
+2. [Modelado de datos - DER (Diagrama de entidad relación)](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/modelado-DER.html)
+3. [Claves](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/claves.html)
+4. [Creación de base de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/creacionBD-y-tablas.html)
+5. [Inserción, modificación de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/insercion-y-modificacion.html)
 
 
 ## Referencias	
