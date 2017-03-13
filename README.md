@@ -2,15 +2,17 @@
 	
 ## ¿Qué es una base de datos relacional?		
 		
-   Desde el punto de vista informático, la base de datos es un sistema formado por un conjunto de datos almacenados en discos que          permiten el acceso directo a ellos y un conjunto de programas que manipulen ese conjunto de datos.		
-   		
-   Pensemoslo como un almacén, en un almacén guardamos cosas, todo aquello que consideremos importante, necesario y que luego vayamos a    querer utilizar. Es así como debemos ver a la base de datos, como un almacén dónde vamos a guardar un gran volumen de datos pero de      forma organizada, de esta manera nos va a ser fácil acceder a ellos cada vez que los necesitemos. 		
+  Una base de datos es un sistema formado por un conjunto de datos almacenados en discos que permiten el acceso directo a ellos.
+  
+  Pensemoslo como un almacén, en un almacén en el cual guardamos cosas. En este almacén guardaremos todo aquello que consideremos  	   importante, necesario, algo que se necesita que perdure en el tiemp, ya que estos datos serán utilizados para el análisis requerido     según sea el caso. 
+  
+  En una base de datos, los datos se guardan de forma organizada, de esta manera será más fácil acceder a ellos cada vez que sea           necesario.
     		
-### **¿De qué forma accedemos a este almacén?**		
+### **¿De qué forma utlizamos los datos guardados?**		
  		
-   Accedemos a través de consultas (query), las cuáles se realizan a través de un lenguaje en especifico, ese lenguaje se llama            SQL(Structured Query Language - Lenguaje de consultas estructurado).		
+  A través de consultas (query), se van a poder realizar la manipulación y/o análisis de datos. Estas consultas se realizan a través de   un lenguaje en especifico, ese lenguaje se llama SQL(Structured Query Language - Lenguaje de consultas estructurado).		
     		
-   Ahora, si decimos que vamos a tratar a hablar sobre una base de datos relacional, esta tiene ciertas características:		
+ Ya que vamos a tratar sobre una base de datos relacional, esta tiene ciertas características:		
     		
 - Una base de datos se compone de varias tablas o relaciones.		
 - No pueden existir dos tablas con el mismo nombre ni registro.			
@@ -19,16 +21,19 @@
 - Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.
 - Las claves ajenas se colocan en la tabla hija, contienen el mismo valor que la clave primaria del registro padre; por medio de estas 	   se hacen las formas relacionales.		
 
-## ¿Para qué sirve una base de datos? ¿Cuándo usar una base de datos?			
-  Cuando tengamos que manejar y guardar mucha información. ¿Dónde podemos pensar que manejan bases de datos? Por ejemplo, empresas de     telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna   web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
+## ¿Para qué sirve una base de datos? ¿Cuándo usar una base de datos?
 
-  Resumiendo, uso una base de datos cuando quiero guardar datos que no quiero perder, datos que quiero que perduren en el tiempo.	
+  Cuando tengamos que manejar y guardar mucha información. ¿En qué situaciones se usan las bases de datos? Por ejemplo, en empresas de     telefonía que necesitan guardar información de sus clientes, datos personales, facturación; cada vez que creamos un usuario en alguna   web, esa web necesita una base de datos para guardar nuestros usuarios y contraseñas.	
+
 **Antes de empezar con una BD, empecemos por modelarla, para eso necesitamos _Un DER_**		
 
-## ¿De qué trata el tutorial?
+## ¿Qué se va a tratar?
 
-## A quién está orientado del curso
-El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en bases de datos relacionales.
+La idea es dar los primeros bases con una base de datos relacional, estos pasos se irán dando sobre un ejemplo. Se van a manejar datos de clientes, de los cuales queremos guardar sus datos personales, factura, el detalle de estas, los productos, etc.
+
+## A quién está orientado este material
+
+Está orientado a todo aquel que quiera dar sus primeros pasos en bases de datos relacionales.
 
 ## Conocimientos previos
 
@@ -46,7 +51,7 @@ El tutorial está orientado a todo aquel que quiera dar sus primeros pasos en ba
 
 
 ## Referencias	
-		
-	
+
+https://es.wikipedia.org/wiki/Base_de_datos_relacional
 	
 		
