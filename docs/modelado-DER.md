@@ -56,9 +56,11 @@ Por este motivo, se pensó  y se decidió que lo mejor sería usar una base de d
 Se sabe que se necesita guardar datos relevante para su posterior análisis, para esto se pensó cuáles serían estos datos y se muestran acontinuación:   
 
 **Clientes**
+
 Nombre, apellido, nro de Cuit, , teléfono, dirección, ciudad, barrio, código postal.
 
 **Facturas**
+
 Factura, fecha , fechaVencimiento, productos.
 
 Tal como se ve, parece que se necesita poco, sin embargo, pensemos un poco, por cada cliente se guardaran los datos mencionados pero en algunos campos se generarán datos repetidos, los cuales no quiere decir que estén mal pero implicarán mayor uso de recursos. ¿A qué se refiere esto? Cada campo se guarda con un tipo de datos distinto (cada uno pide espacio a memoria), los nombres y apellidos son caracteres para los cuales debemos de asumir un máximo de espacio requerido porque no se puede saber cuántos caracteres se van a necesitar, por ese motivo decimos que el tipo de datos será VARCHAR y la cantidad máxima 60. En el caso de nombre y apellido del cliente, para la entidad cliente, esto es algo que no se puede evitar pero en el caso de los barrios sí. ¿De qué nos sirve pedir espacio para los nombres de los barrios? Si en muchos casos los barrios se van a repetir ¿No estaría pidiendo espacio y usando recursos de más? Sí, así es, si guardamos en la tabla clientes el nomnbre de cada barrio por cada cliente, estaríamos usando espacio de forma ineficiente, esto a largo plazo, es perjudicial, ya que mientras más datos tengamos, más recursos pedimos y usamos, esto ralentiza la base de datos y en este caso de forma innesaria. La solución a este problema se conoce como _Normalización_ [Más info acá](https://es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos), en palabras simples, iremos separando en otras tablas ciertos datos que serán repetitivos, como los barrios, de tal manera que en vez de poner el nombre del barrio al que pertenece el cliente, se le asignará un código (número) ¿Por qué? Porque se consumen menos recursos si se le asigna un número que si le agina nombre por nombre de barrio a cada cliente. Mencionado esto se procede a separar datos que se consideren repetitivos.
@@ -66,12 +68,14 @@ Tal como se ve, parece que se necesita poco, sin embargo, pensemos un poco, por 
 Clientes guardaría los siguientes datos:
   
 **Clientes**
+
 código de cliente, Nombre, apellido, nro de Cuit, , teléfono, dirección, ciudad, código de barrio, código postal. Nótese que se va a guardar códgio de barrio y no el nombre del barrio.
 
 En el caso de las facturas para algo similar con los productos, conviene más manejar los datos los productos con algún código de producto que guardar nombre por nombre. En este caso también podemos separar algunos datos más para su mejor procesamiento. 
 En facturas se va a guardar, número de factura, fecha, fecha de vencimiento y código de cliente (Por lo mencionado unos párrafos más arriba, es más conveniete relacionar cada factura con el código del cliente que con el nombre y apellido). ¿Dónde quedan los productos, el precio del producto, la cantidad? Bueno, esos datos los vamos a guardar en Facturas Detalle.
 
 **FacturasDetalle**
+
 número de factura,nro de ítem, código de producto, cantidad, importe.
 
 Algo importante es que ese nro de factura, es el mismo que en Facturas, si no, no podrían manipularse si no tienen relación alguna. Lo mismo para código de producto, ese código de producto debe existir en la tabla Productos, con ese código de producto se podrá hacer el cálculo correspondiente al importe que saldrá al tomar el código de producto para consultar el precio unitario en productos, entonces, con la "cantidad" que se tiene en factura detalle y el "precio unitario" en Productos, se hace la cuenta y se tendrá el importe total por producto.
@@ -79,18 +83,23 @@ Algo importante es que ese nro de factura, es el mismo que en Facturas, si no, n
 Entonces, las entidades con sus atributos quedarán de la siguiente manera:
 
 **Clientes**
+
 código de cliente, Nombre, apellido, nro de Cuit, , teléfono, dirección, ciudad, código de barrio, código postal.
 
 **Facturas**
+
 Factura, fecha , fechaVencimiento, código de cliente.
 
 **FacturasDetalle**
+
 número de factura,nro de ítem, código de producto, cantidad, importe.
 
 **Productos**
+
 Código de producto, nombre de producto, precio unitario.
 
 **Barrios**
+
 Código de barrio, nombre de barrio.
 
 Acontinuación se deja el DER correspondiente a la solución de este problema.
