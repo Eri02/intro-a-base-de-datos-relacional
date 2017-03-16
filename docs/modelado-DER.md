@@ -104,4 +104,5 @@ Código de barrio, nombre de barrio.
 
 Acontinuación se deja el DER correspondiente a la solución de este problema.
 
+
 ![DER Solución](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/BDPTFDER.png)
