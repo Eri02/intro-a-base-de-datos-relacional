@@ -1,6 +1,9 @@
 ### Instalación y configuración de motor de base de datos		
 		
-Hay gran variedad y se eligen en base a nuestras necesidades y requerimientos. En este caso encontrarán los pasos para instalar y trabajar con MySQL Workbench. [Tipos de bases de datos](https://blog.pandorafms.org/es/tipos-de-bases-de-datos-y-las-mejores-bases-de-datos-del-2016/)
+Con respecto a los motores de bases de datos existe una gran variedad, estas se deben elegir en base a nuestras necesidades y requerimientos. En el siguiente enlace se puede ver un poco los tipos que existen. 
+[Tipos de bases de datos](https://blog.pandorafms.org/es/tipos-de-bases-de-datos-y-las-mejores-bases-de-datos-del-2016/)
+
+En este caso en particular se mostrarán los pasos para instalar y trabajar con MySQL Workbench. 
 
 1. Descargar [MySQL acá](http://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.11.0.msi)		
 Instalar el MySQL en la configuracion Developer, ahí pueden crear ustedes el usuario y contraseña que quieran, o tomar como             sugerencia User: root pass:admin	
