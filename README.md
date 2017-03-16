@@ -53,6 +53,7 @@ Está orientado a todo aquel que quiera dar sus primeros pasos en bases de datos
 ## Referencias	
 
 [Base de datos relacional](https://es.wikipedia.org/wiki/Base_de_datos_relacional)
+
 [DER](https://es.wikipedia.org/wiki/Modelo_entidad-relaci%C3%B3n#Base_te.C3.B3rica_y_conceptual)
 	
 		
