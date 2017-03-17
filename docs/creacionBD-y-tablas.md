@@ -1,25 +1,14 @@
 ### Crear una tabla (CREATE TABLE...)		
 
-Ahora, una vez que está la base instalada, tomemos como ejemplo un negocio, uno de ventas de productos del cuál queremos guardar los     datos de los clientes junto con la facturación correspondiente.		
-		
-Pensemos un momento en qué datos deberíamos guardar...		
-
-En el caso del cliente, necesitaremos datos como:		
-- Nombre 		
-- Apellido		
-- Nro de Cuit		
-- Dirección		
-- Código de provincia		
-- Ciudad		
-- Código postal		
-- Teléfono		
-		
 ### Crear base de datos (CREATE DATABASE...)		
 
 Antes de crear la tabla para clientes, tenemos que crear la base de datos dónde se van a alojar las tablas. El código que necesitamos    para crear la base es CREATE DATABASE nombreDeLaBase. Para el ejemplo, quedaría algo así:		
 
 Sintaxis
-`CREATE DATABASE BDPTF;`		
+`CREATE DATABASE BDPTF;`
+
+**BDPTF** es el nombre que se le va a dar a la base de datos. Puede ser cualquiera.
+	
 		
 Después de esto se le tiene que indicar al motor, qué base debe usar para trabajar, para eso escribimos algo así:		
 
