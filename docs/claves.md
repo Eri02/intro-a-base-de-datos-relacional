@@ -15,7 +15,7 @@ Para la aplicación mencionada, se está usando en cada tabla el campo identific
 
 **Clientes**: cli_idCliente, pro_idProducto, f_idFactura, etc.
 
-Algo más de [constraints](http://www.1keydata.com/es/sql/sql-constraint.php)
+**Algo más de [Constraints](http://www.1keydata.com/es/sql/sql-constraint.php)**
  		
 **2. Clave foránea (FK)**		
 		
@@ -24,6 +24,8 @@ La clave foránea o foreign key identifica una columna o grupo de columnasen una
 Por ejemplo en el DER de la aplicación tenemos:
 
 ![DER](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/BDPTFDER.png)
+
+
 
 Veamos la tabla **Clientes** y **Facturas** tenemos que _cli_idCliente_ y _f_idFactura_ son primary key, además en facturas hay un campo llamado f_idCliente, este campo hace referencia a la tabla clientes, este campo es primary key en la tabla **Clientes**, este campo es clave foránea en la tabla **Factura**.
 
