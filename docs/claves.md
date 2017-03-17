@@ -1,6 +1,6 @@
 ## Clave primara y clave foránea		
  		
-[Modelo Relacional](http://4.bp.blogspot.com/-tUwf6nU-FLM/UWzga4Ymt7I/AAAAAAAAAIg/8R8GNhcOej8/s1600/propiedades+entidad+relacion.png)
+![Modelo Relacional](http://4.bp.blogspot.com/-tUwf6nU-FLM/UWzga4Ymt7I/AAAAAAAAAIg/8R8GNhcOej8/s1600/propiedades+entidad+relacion.png)
 		
 **1. Clave primaria (PK)**		
  
