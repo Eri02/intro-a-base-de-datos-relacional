@@ -48,8 +48,8 @@ Está orientado a todo aquel que quiera dar sus primeros pasos en bases de datos
 3. [Claves](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/claves.html)
 4. [Creación de base de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/creacionBD-y-tablas.html)
 5. [Inserción, modificación de datos y tablas](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/insercion-y-modificacion.html)
-6. Consulta de clientes 
-7. Ejemplo de login básico.
+6. [Consulta de clientes](https://eri02.github.io/intro-a-base-de-datos-relacional/docs/consultas.html)
+7. [Ejemplo de login básico](https://eri02.github.io/intro-a-base-de-datos-relacional/login/ejemplo-login.html)
 
 
 ## Referencias	
