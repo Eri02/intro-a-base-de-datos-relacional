@@ -2,22 +2,23 @@
 <html>
 <head>
 	<title> Login</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
 
 	<h1>Login de usuarios</h1>
 	<hr>
-
+<div id="formulario">
 	<form action="checkLogin.php" method="post">
-		<label>Nombre usuario:</label><br>
+		<label>Nombre usuario:</label><br><br>
 		<input type="text" name="username" id="username" required><br><br>
 
-		<label>Password:</label><br>
+		<label>Password:</label><br><br>
 		<input type="password" name="password" id="password" required> <br><br>
 		
 		<input type="submit" name="Submit" value="Login">
-
+		
 	</form>
-
+</div>
 </body>
 </html>

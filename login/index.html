@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registra usuario</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<header>
+		<h1>Registrate en nuestro site</h1>
+	</header>
+
+	<div id="formulario">
+	<form action="registra-usuario.php" method="post">
+		<h3>Crea una cuenta</h3>
+
+		<!--Nombre de usuario--> 
+		<label for="nombre">Nombre de usuario:</label><br><br>
+		<input type="text" name="username" maxlength="32" required><br><br>
+
+		<!--Password-->
+		<label for="pass">Password:</label><br><br>
+		<input type="password" name="password" maxlength="8" required><br><br>
+
+		<input type="submit" name="submit" value="Registrar">
+		<input type="reset" name="clear" value="Borrar">
+	</form>
+	</div>
+	<hr>
+
+	<footer>
+		
+	</footer>
+		
+
+
+</body>
+</html>

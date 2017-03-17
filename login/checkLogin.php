@@ -7,8 +7,8 @@
 $host_db  = "localhost";
 $user_db  = "root";
 $pass_db  = "admin";
-$db_name  = "BDPrueba";
-$tbl_name = "Usuarios";
+$db_name  = "LOGIN";
+$tbl_name = "usuarios";
 
 $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 

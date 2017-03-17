@@ -2,8 +2,8 @@
 $host_db  = "localhost";
 $user_db  = "root";
 $pass_db  = "admin";
-$db_name  = "BDPrueba";
-$tbl_name = "Usuarios";
+$db_name  = "LOGIN";
+$tbl_name = "usuarios";
 
 $form_pass = $_POST['password'];
 
@@ -25,7 +25,7 @@ if ($count == 1) {
 	echo "<br>". "El nombre de usuario ya ha sido tomado.". "<br>";
 	echo "<a href = 'index.html'> Por favor escoja otro nombre</a>";
 	}else{
-		$query = "INSERT INTO Usuarios (nombre_usuario, password)
+		$query = "INSERT INTO usuarios (nombre_usuario, password)
 		VALUES ('$_POST[username]','$hash')";
 
 		if ($conexion->query($query)===TRUE) {
