@@ -40,4 +40,4 @@ Ahora, unas aclaraciones sobre la creación de la tabla Clientes:
 		
 De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia con el script de creación junto al DER correspondiente.	
 
-![Creación de tablas](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/creacionTablas.png)
+![Creación de tablas](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/img/creacionTablas.png)
