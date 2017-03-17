@@ -23,7 +23,7 @@ La clave foránea o foreign key identifica una columna o grupo de columnasen una
 
 Por ejemplo en el DER de la aplicación tenemos:
 
-![DER](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/BDPTFDER.png)
+![DER](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/img/BDPTFDER.png)
 
 
 
