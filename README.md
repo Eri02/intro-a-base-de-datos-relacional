@@ -54,10 +54,8 @@ Está orientado a todo aquel que quiera dar sus primeros pasos en bases de datos
 
 ## Referencias	y links recomendados
 
-[Base de datos relacional](https://es.wikipedia.org/wiki/Base_de_datos_relacional)
-
-[DER](https://es.wikipedia.org/wiki/Modelo_entidad-relaci%C3%B3n#Base_te.C3.B3rica_y_conceptual)
-
-[](https://nascento.wordpress.com/2011/02/07/%C2%BFcomo-escoger-una-base-de-datos/)
-[](http://www.datacentric.es/blog/bases-datos/importancia-bases-de-datos-2/)
+- [Base de datos relacional](https://es.wikipedia.org/wiki/Base_de_datos_relacional)
+- [DER](https://es.wikipedia.org/wiki/Modelo_entidad-relaci%C3%B3n#Base_te.C3.B3rica_y_conceptual)
+- [¿Cómo elegir una base de datos?](https://nascento.wordpress.com/2011/02/07/%C2%BFcomo-escoger-una-base-de-datos/)
+- [Importancia de las bases de datos](http://www.datacentric.es/blog/bases-datos/importancia-bases-de-datos-2/)
 		
