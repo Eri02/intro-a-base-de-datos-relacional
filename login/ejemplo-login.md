@@ -4,7 +4,7 @@
 
 - Un editor de texto a elección (Sublime text, Atom, Notepad ++, etc).
 - Descargar xampp
-- MySQL (Ya lo tenemos por lo visto anteriormente).
+- MySQL. Xampp viene con mysql. En caso de tenerla, no hay problema
 - Conocimientosde php, html.
 
 ## ¿Qué haremos?
