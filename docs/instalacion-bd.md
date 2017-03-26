@@ -8,7 +8,7 @@ En este caso en particular se mostrarán los pasos para instalar y trabajar con 
 1. Descargar [MySQL acá](http://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.11.0.msi)		
 Instalar el MySQL en la configuracion Developer, ahí pueden crear ustedes el usuario y contraseña que quieran, o tomar como             sugerencia User: root pass:admin	
 
-2. Abrir el workbench, se verá así: 
+2. Abrir el workbench. Se verá así: 
 
 ![Inicio de workbench](http://enriqueincioch.azurewebsites.net/wp-content/uploads/2015/05/MySQLAzure04.png)
 
