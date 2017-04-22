@@ -1,4 +1,14 @@
-### Crear una tabla (CREATE TABLE...)		
+### Crear una tabla (CREATE TABLE...)	
+
+¿Dónde, cómo se va a crear la base de datos, las tablas, etc?
+
+Abrir el workbench, ya una vez que se inició la sesión correctamente, se verá algo como se muestra en la imagen (sin código, todo en blanco). Si no se llegara a ver ese panel en blanco dónde se escribe el código se puede abrir de la siguiente manera:
+
+- Se puede ir a "File" y seleccionar la opción "New Query tab" y sino, abajo de esa opción hay un ícono que parece una hoja y dice "SQL +", ambas opciones sirven.
+En este panel se va a codear lenguaje SQL (Structured Query Language), acá iría el código para crear la base de datos, crear tablas, actualizar datos, insertar datos y consultarlos. Una vez que se tiene el código, se selecciona el código y para ejecutarlo, dar clic en la imagen que está en ese mismo panel, la imagen de rayo.
+
+![Creación de tablas](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/img/creacionTablas.png)
+
 
 ### Crear base de datos (CREATE DATABASE...)		
 
@@ -38,7 +48,10 @@ Ahora, unas aclaraciones sobre la creación de la tabla Clientes:
 - Algunos motores de bases de datos son case sensitive, o sea, que distinguen entre mayúsculas y minúsculas, en este caso MySQL no lo     es, pero esto se debe tener en cuenta.		
 - El punto y coma ";" se usa para finalizar una sentencia, en el caso de la creación de la tabla Clientes, si luego viniese otra tabla     es necesario finalizar con un ";" y después de esto escribir el códgio correspondiente a la creación de otra tabla, si no hubiese       código siguiente a esto, puede omitirse el punto y coma.		
 		
-De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia con el script de creación junto al DER correspondiente.	
+De la misma forma que se creó la tabla Clientes, debemos crear las tablas provincias, productos, facturas y facturasDetalle; los datos que se le van a agregar a cada una de estas tablas, en general, queda a elección del creador, esto se elige en base a cada necesidad. De todas formas, se deja una sugerencia de la creación de tablas e inserción de datos.
+
+Además, se deja el script de creación, estructura y datos, en la carpeta "Script". Este script ya tiene los datos y sus tablas, lo que se debe hacer es importarlo en el workbench. Para esto, ir a la opción "Server", luego a "Data import", ahí selecionar la opción "Import form self-contained file", luego dar clic en el botón "Start import".
+
+![Import](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/img/import.png)
 
 
-![Creación de tablas](https://github.com/Eri02/intro-a-base-de-datos-relacional/blob/gh-pages/img/creacionTablas.png)
