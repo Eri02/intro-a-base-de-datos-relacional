@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registra usuario</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css de bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+
+
 <?php 
 $host_db  = "localhost";
 $user_db  = "root";
@@ -30,7 +44,10 @@ if ($count == 1) {
 
 		if ($conexion->query($query)===TRUE) {
 			echo "<br>". "<h2>". "Usuario creado exitosamente"."</h2>";
-			echo "<h4>"."Bienvenido ". $_POST['username']."</h4>"."<br><br>";
+			//echo "<h4>"."Bienvenido ". $_POST['username']."</h4>"."<br><br>";
+			//<div class="alert alert-success">...</div>
+
+			echo "<h4><div class='alert alert-success'>Bienvenido ". $_POST['username']."</div></h4>"."<br><br>";
 			echo "<h5>". "Hacer login: ". "<a href = 'login.html'>Login</a>". "</h5>";
 		}else{
 			echo "Error al crear el usuario.". $query. "<br>". $conexion->error;
@@ -39,3 +56,13 @@ if ($count == 1) {
 	mysqli_close($conexion);
 
 ?>
+
+
+	<footer>
+		
+	</footer>
+		
+
+
+</body>
+</html>
